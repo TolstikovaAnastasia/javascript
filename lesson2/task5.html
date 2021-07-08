@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        'use strict';
+
+        function sum(arg1, arg2) {
+            return (arg1 + arg2);
+        }
+
+        function subtract(arg1, arg2) {
+            return (arg1 - arg2);
+        }
+
+        function multiply(arg1, arg2) {
+            return (arg1 * arg2);
+        }
+
+        function divide(arg1, arg2) {
+            return (arg1 / arg2);
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "сложение":
+                    return sum(arg1, arg2);
+                case "вычитание":
+                    return subtract(arg1, arg2);
+                case "умножение":
+                    return multiply(arg1, arg2);
+                case "деление":
+                    return divide(arg1, arg2);
+            }
+        }
+
+        console.log(mathOperation(16, 53, "сложение"));
+        console.log(mathOperation(16, 53, "вычитание"));
+        console.log(mathOperation(16, 53, "умножение"));
+        console.log(mathOperation(16, 53, "деление"));
+
+
+    </script>
+
+</body>
+
+</html>
