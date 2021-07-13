@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        'use strict';
+        const products = [
+           {
+               id: 3,
+               price: 200,
+           },
+           {
+               id: 4,
+               price: 900,
+           },
+           {
+               id: 1,
+               price: 1000,
+           },
+       ];
+
+       /*function iterateFn(productDiscount) {
+           let price = products.price;
+           let discount = (price * 15) / 100;
+           let finalPrice = price - discount;
+           alert(productDiscount);
+       };*/
+
+       let discountSize = 15;
+       let finalPrice = 0;
+       products.forEach(function(elem) {
+           let discount = elem.price * discountSize / 100;
+           finalPrice = elem.price - discount;
+           elem.price = finalPrice;
+       });
+
+       console.log(products);
+
+    </script>
+
+</body>
+
+</html>
