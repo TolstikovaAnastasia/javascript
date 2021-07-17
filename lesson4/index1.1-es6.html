@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+            make25PercentDiscount (discount) {
+                this.price = this.price - (this.price * 25 / 100);
+            }
+        }
+
+        let product = new Product('название1', 288);
+
+        product.make25PercentDiscount();
+        console.log(product);
+
+    </script>
+</body>
+
+</html>

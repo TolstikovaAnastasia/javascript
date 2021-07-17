@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function() {
+            alert(this.text);
+        }
+
+        function AttachedPost(author, text, date, highlighted) {
+           Post.call(this, author, text, date);
+           this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+            alert(this.highlighted);
+        }
+
+        let attachedPost = new AttachedPost('Anton', 'text', '17.07.2021', 'true');
+        attachedPost.edit();
+        attachedPost.makeTextHighlighted();
+
+    </script>
+</body>
+
+</html>
